@@ -6,6 +6,4 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        for elements in range(len(nums)+1):
-            if elements not in nums:
-                return elements
+        return (set(range(len(nums)+1)) - set(nums)).pop()
