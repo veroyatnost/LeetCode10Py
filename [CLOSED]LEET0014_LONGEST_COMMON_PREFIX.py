@@ -1,7 +1,5 @@
 #coding=utf-8
 
-#L = ['bad','badsdxx','baxadf','bads']
-
 import numpy as np
 
 def LongestCommonPrefix(L):
@@ -11,3 +9,6 @@ def LongestCommonPrefix(L):
             continue
         else:
             return i
+        
+# L = ['bad','badsdxx','baxadf','bads']
+# map(None,*L)
