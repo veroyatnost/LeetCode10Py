@@ -15,3 +15,15 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
 
 Subscribe to see which companies asked this question.
 '''
+
+
+def longestsubstring(string):
+    lword = {}
+    n = ''
+    for i in string:
+        if i not in n:
+            n += i
+        else:
+            lword[len(n)] = n
+            n = i
+    return lword[max(lword.keys())]
