@@ -7,7 +7,7 @@ characters in front of it. Find and return the shortest.
 
 def shortestPalindrom(s):
 	n = len(s)
-	##l, r = n/2, (n+1)/2  MISTAKE!
+	l, r = int(n/2), int((n+1)/2)
 	while l > 0:
 		if s[:l] == s[r+l-1: r-1: -1]: break
 		elif l == r: l -= 1
