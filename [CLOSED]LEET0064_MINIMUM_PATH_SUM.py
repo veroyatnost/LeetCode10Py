@@ -1,3 +1,5 @@
+#coding=utf-8
+
 def FindPath(M):
     m,n = M.shape
     MValue, MPath , Path = np.zeros((m,n)),np.zeros((m,n)), []
