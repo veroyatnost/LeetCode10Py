@@ -11,18 +11,16 @@ Output: 7 -> 0 -> 8
 '''
 import itertools
 
-def add_two_numbers(number1,number2):
-    list1 = number1.split("->")
-    list2 = number2.split("->")
+def add_two_numbers(list1,list2):
     newlist = []
     carry = 0
-    for n,m in list(itertools.zip_longest(list1,list2)):
+    for n,m in list(itertools.izip_longest(list1,list2)):
         if int(n or 0) + int(m or 0) + carry < 10:
             newlist.append(str(int(n or 0) + int(m or 0) + carry))
             carry = 0
         else:
             newlist.append(str(int(n or 0) + int(m or 0) + carry - 10))
             carry = 1
-    return "->".join(newlist)
+    return newlist
 
 
