@@ -11,3 +11,11 @@ Here are few examples.
 [1,3,5,6], 7 → 4
 [1,3,5,6], 0 → 0
 """
+def searchinsertposition(sortedlist,target):
+    if target not in sortedlist:
+        sortedlist.append(target)
+        sortedlist.sort()
+    return sortedlist.index(target)
+
+
+
