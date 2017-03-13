@@ -29,10 +29,10 @@ class Solution(object):
         :type n: int
         :rtype: List[str]
         """
-        l = []
+        result = []
         for i in range(1, n+1):
-            if i % 3 != 0 and i % 5 != 0:l.append(str(i))
-            elif i % 3 == 0 and i % 5 != 0:l.append("Fizz")
-            elif i % 5 == 0 and i % 3 != 0:l.append("Buzz")
-            else:l.append("FizzBuzz")
-        return l
+            if i % 3 != 0 and i % 5 != 0: result.append(str(i))
+            elif i % 3 == 0 and i % 5 != 0: result.append("Fizz")
+            elif i % 5 == 0 and i % 3 != 0: result.append("Buzz")
+            else: result.append("FizzBuzz")
+        return result
