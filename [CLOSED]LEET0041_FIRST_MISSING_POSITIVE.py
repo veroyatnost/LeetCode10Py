@@ -14,9 +14,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        i, length_nums = 0,  len(nums) + 1
+        i, length_nums = 1,  len(nums) + 1
         s = set(nums)
         while i <= length_nums:
-            i += 1
             if i not in s:
                 return i
+            i += 1
