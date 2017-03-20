@@ -11,7 +11,7 @@ def maxSum(a):
   for i in range(1,len(a)):
     if Sum<Min:
       Min,m=Sum,i
-      Sum+=a[i]
+    Sum+=a[i]
     if Sum-Min>Max:
       Max,n=Sum-Min,i+1
   return a[m:n]
