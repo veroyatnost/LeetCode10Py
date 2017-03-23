@@ -17,13 +17,3 @@ The number of ways decoding "12" is 2.
 '''
 #Tip: Use DP, like complicated Fibonacci
 
-def linked(c,k):
-  return int(c[k-1:k+1])>10 and int(c[k-1:k+1])<=26 and int(c[k-1:k+1])!=20
-def CodeWays(c):
-  m=len(c)
-  dp=[0 for i in range(m)]
-  dp[0]=1
-  dp[1]=2 if linked(c,1) else 1
-  for i in range(2,m):
-    dp[i]=dp[i-2]+dp[i-1] if linked(c,i) else dp[i-1]
-    return dp
