@@ -17,5 +17,18 @@ def searchinsertposition(sortedlist,target):
         sortedlist.sort()
     return sortedlist.index(target)
 
+"""
+a more traditional solution
+"""
 
-
+def search(A, t):
+    left,right,result=0,len(A)-1,0
+    while left<=right:
+        mid=left+int((right-left)/2)
+        if A[mid]==t:
+            return mid
+        elif A[mid]>t:
+            right,result=mid-1,mid
+        else:
+            left,result=mid+1,mid+1
+            return result

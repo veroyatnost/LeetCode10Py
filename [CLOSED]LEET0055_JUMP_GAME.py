@@ -11,4 +11,10 @@
 # A = [2,3,1,1,4], return true.
 
 # A = [3,2,1,0,4], return false.
-
+def canJump(self, l):
+  furthest=0
+  index=0
+  while index<=furthest and index<len(l):
+    furthest=max(furthest,index+l[index])
+    index+=1
+  return index==len(l)
