@@ -16,3 +16,16 @@ def maxSubArray(nums):
     if Sum > MaxSum:
       MaxSum=Sum
     return MaxSum   
+
+  '''
+  another method
+  '''
+  def maxSubArray(l):
+    if l==[]:
+      return 0
+    sum,minSum,maxSum=l[0],min(0,l[0]),l[0]
+    for i in range(1,len(l)):
+      sum+=l[i]
+      maxSum=max(maxSum,sum-minSum)
+      minSum=min(minSum,sum)
+    return maxSum

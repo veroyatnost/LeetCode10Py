@@ -20,3 +20,17 @@ class Solution(object):
             if i not in s:
                 return i
             i += 1
+
+"""
+another method, O(nlogn) time, sort makes things easy, O(1) extra space
+"""
+def firstMissingPositive(L):
+    L.sort()
+    m=0
+    for i in range(len(L)):
+        if L[i]==m+1:
+            m+=1
+        elif L[i]>m+1:
+            break
+    return m+1
+"""
