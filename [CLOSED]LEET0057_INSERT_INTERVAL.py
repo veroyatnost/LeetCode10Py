@@ -14,3 +14,17 @@ Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] in as [1,2],[3,10
 
 This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
 """
+
+def insert(VS,NV):
+  result,index=[],0
+  for V in VS:
+    if V[1]<NV[0]:
+      result.append(V)
+      index+=1
+    elif V[0]<=NV[1]:
+      NV=Interval(min(V[0],NV[0]),max(V[1],NV[1]))
+      index+=1
+  result.append(NV)
+  for i in range(index,len(VS)):
+    result.append(VS[i])
+  return result
